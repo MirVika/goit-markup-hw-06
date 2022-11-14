@@ -563,8 +563,13 @@
           </label>
           </div>
             <label class="form-field" for="">
-              <input type="checkbox" name="">
-              <span>Погоджуюся з розсилкою та приймаю<a href=""> Умови договору</a></span>
+              <input class="checkbox-form" type="checkbox" name="agreement">
+              
+<svg class="form-icon" width="16" height="15">
+                  <use class="unchecked" href="./img/icons.svg#icon-rectangle"></use>
+                  <use class="checked" href="./img/icons.svg#icon-icon-check1"></use>
+                </svg>
+              <span class="agreement-text">Погоджуюся з розсилкою та приймаю<a class="agreement-link" href=""> Умови договору</a></span>
             </label>
             <button class="form-btn primary button" type="submit" disabled>Відправити</button>
         </form>
