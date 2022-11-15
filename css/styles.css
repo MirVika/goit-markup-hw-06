@@ -618,6 +618,20 @@ footer a {
   border-radius: 4px;
 }
 
+.footer-btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  margin-left: 12px;
+  gap: 10px;
+  transition: background-color var(--trns-fast);
+}
+.send-icon {
+  justify-content: center;
+}
+
+
 
 /* portfolio */
 /* examples */
@@ -808,9 +822,11 @@ footer a {
   margin-top: 40px;
   margin-bottom: 12px;
 }
-.form-field {
-}
+
+
+
 .form-label {
+  
   display: block;
   font-weight: 400;
   font-size: 12px;
@@ -823,7 +839,7 @@ footer a {
   width: 448px;
   height: 40px;
   left: 576px;
-  top: 383px;
+  top: ;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;

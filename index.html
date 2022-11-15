@@ -516,8 +516,11 @@
               <input class="footer-input" type="email" name="email" placeholder="E-mail">
             </label>
             </div>
-            <button class="button primary" type="submit">
-Підписатися</button>
+            <button class="button primary footer-btn" type="submit">
+Підписатися
+<svg class="send-icon" width="24" height="24">
+                  <use href="./img/icons.svg#icon-icon-send"></use>
+                </svg></button>
           </form>
         
       </div>
@@ -558,14 +561,15 @@
           </label>
            <label class="form-field">
 <span class="form-label">Коментар</span>
-            <textarea class="form-message" name="user_message" rows="5">Введіть текст</textarea>
+            <textarea class="form-message" name="user_message" rows="5" placeholder="Введіть текст"></textarea>
 
           </label>
           </div>
-            <label class="form-field" for="">
+            
               <input class="checkbox-form" type="checkbox" name="agreement">
+              <label class="form-field" for=""></label>
               
-<svg class="form-icon" width="16" height="15">
+<svg class="form-check" width="16" height="15">
                   <use class="unchecked" href="./img/icons.svg#icon-rectangle"></use>
                   <use class="checked" href="./img/icons.svg#icon-icon-check1"></use>
                 </svg>
