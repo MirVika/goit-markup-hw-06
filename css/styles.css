@@ -603,6 +603,11 @@ footer a {
 
 .subscribe-form {
   margin-left: 93px;
+ 
+}
+.follow {
+  display: flex;
+  align-items: center;
 }
 .footer-input {
   padding: 15px;
@@ -619,6 +624,17 @@ footer a {
 }
 
 .footer-btn {
+  color: var(--secondary-acent-text-color);
+    background-color: var(--acent-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    letter-spacing: 0.06em;
+    border: inherit;
+    border: none transparent;
+    padding: 10px 32px;
+   
+   
   display: flex;
   align-items: center;
   cursor: pointer;
