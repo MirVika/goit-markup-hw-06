@@ -936,19 +936,19 @@ color: var(--secondary-acent-text-color);
 }
 .check__box {
   position: absolute;
-  margin-top: 0.2em;
+  margin-top: 0.4em;
   margin-left: -1em;
-  width: 0.6em;
-  height: 0.6em;
+  width: 0.8em;
+  height: 0.8em;
   overflow: hidden;
   border-radius: 0.05em;
   background-color: white;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  box-shadow: 0 0 0 0.1em #4A90E2;
+  box-shadow: 0 0 0 0.1em var(--acent-text-color);
 }
 .check__input:checked+.check__box {
-  background-color: #4A90E2;
+  background-color: var(--acent-text-color);
   background-image: url(images/check.svg);
 }
 .check__input:focus+.check__box {
