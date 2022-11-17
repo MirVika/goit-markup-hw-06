@@ -535,6 +535,7 @@
         <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
         <form class="modal-form">
           <div class="form-group">
+            <div class="modal-field">
           <label class="form-field">
 <span class="form-label">Ім'я</span>
             <input class="form-input" type="text" name="" required minlength="2">
@@ -543,6 +544,8 @@
                   <use href="./img/icons.svg#icon-person-black-18dp-1"></use>
                 </svg>
           </label>
+          </div>
+           <div class="modal-field">
            <label class="form-field">
 <span class="form-label">Телефон</span>
             <input class="form-input" type="tel" name="" required minlength="12" maxlength="12">
@@ -551,6 +554,8 @@
                   <use href="./img/icons.svg#icon-phone-black-18dp-1"></use>
                 </svg>
           </label>
+          </div>
+          <div class="modal-field">
             <label class="form-field">
 <span class="form-label">Пошта</span>
               <input class="form-input" type="email" name="" required>
@@ -559,23 +564,22 @@
                   <use href="./img/icons.svg#icon-email-black-18dp-1"></use>
                 </svg>
           </label>
+          </div>
            <label class="form-field">
 <span class="form-label">Коментар</span>
             <textarea class="form-message" name="user_message" rows="5" placeholder="Введіть текст"></textarea>
 
           </label>
           </div>
-            
-              <input class="checkbox-form" type="checkbox" name="agreement">
-              <label class="form-field" for=""></label>
-              
-<svg class="form-check" width="16" height="15">
-                  <use class="unchecked" href="./img/icons.svg#icon-rectangle"></use>
-                  <use class="checked" href="./img/icons.svg#icon-icon-check1"></use>
-                </svg>
+          <div class="check-agree">
+            <label class="check option">
+  <input class="check__input" type="checkbox">
+  <span class="check__box"></span>
+</label>
               <span class="agreement-text">Погоджуюся з розсилкою та приймаю<a class="agreement-link" href=""> Умови договору</a></span>
             </label>
-            <button class="form-btn primary button" type="submit" disabled>Відправити</button>
+            </div>
+            <button class="form-btn" type="submit" disabled>Відправити</button>
         </form>
       </div>
     </div>

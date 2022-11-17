@@ -602,7 +602,7 @@ footer a {
 }
 
 .subscribe-form {
-  margin-left: 93px;
+  margin-left: auto;
  
 }
 .follow {
@@ -617,7 +617,7 @@ footer a {
   height: 50px;
   left: 815px;
   top: 2784px;
-
+color: var(--secondary-acent-text-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -800,14 +800,11 @@ footer a {
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
   width: 528px;
-  min-height: 581px;
   border-radius: 4px;
   background-color: #ffffff;
   z-index: var(--index-backdrop);
-  padding-top: 40px;
-  padding-left: 39px;
-  padding-bottom: 40px;
-  padding-right: 41px;
+  padding: 40px;
+
 }
 
 .close-btn {
@@ -824,26 +821,37 @@ footer a {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: transparent;
   cursor: pointer;
+  transition: var(--trns-fast);
+}
+.close-btn:hover,
+.close-btn:focus {
+  color: var(--acent-text-color);
 }
 .close-btn-icon {
   fill: currentColor;
 }
-.close-btn-icon:hover {
-  color: var(--acent-text-color);
-}
+
 .modal-title {
   font-weight: 700;
   font-size: 20px;
   line-height: calc(23 / 20);
   text-align: center;
   letter-spacing: 0.03em;
-
   color: #212121;
-  margin-top: 40px;
   margin-bottom: 12px;
 }
 
-
+.modal-field {
+  position: relative;
+  margin-bottom: 10px;
+  display: block;
+}
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  display: inline-block;
+}
 
 .form-label {
   
@@ -854,31 +862,49 @@ footer a {
   /* identical to box height */
   letter-spacing: 0.01em;
   color: #757575;
+  transition: var(--trns-fast);
+
+  
+}
+.form-label:focus,
+.form-label:hover {
+  border: var(--acent-text-color);
 }
 .form-input {
-  width: 448px;
+  width: 100%;
   height: 40px;
   left: 576px;
   top: ;
-
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: transparent;
+  cursor: pointer;
+  transition: border-color  var(--trns-fast);
+  padding-left: 40px;
 }
-.form-input:focus {
+.form-input:focus,
+.form-input:hover {
   border-color: var(--acent-text-color);
   transition: var(--trns-fast);
 }
+.form-icon {
+  color: currentColor;
+}
+.form-icon:focus {
+  color: var(--acent-text-color);
+}
 
 .form-label {
-  margin-top: 10px;
+  
   margin-bottom: 4px;
 }
+
+.form-field {
+  margin-bottom: 20px;
+}
 .form-message {
-  width: 448px;
+  width: 100%;
   height: 120px;
-  left: 576px;
-  top: 519px;
   resize: none;
   font-weight: 400;
   font-size: 12px;
@@ -890,24 +916,55 @@ footer a {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: transparent;
-  margin-bottom: 20px;
+  cursor: pointer;
+  padding: 12px 16px;
 }
 .form-message:focus {
   border-color: var(--acent-text-color);
   transition: var(--trns-fast);
 }
 
-.checkbox-form {
-  appearance: none;
-  width: 16px;
-  height: 15px;
-  border: 2px solid #2196f3;
-  border-radius: 2px;
-  cursor: pointer;
-  transition: var(--trns-fast);
-  background-size: 0;
+.check {
+  padding-left: 1.2em;
 }
-
+.check__input {
+  position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+.check__box {
+  position: absolute;
+  margin-top: 0.2em;
+  margin-left: -1em;
+  width: 0.6em;
+  height: 0.6em;
+  overflow: hidden;
+  border-radius: 0.05em;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  box-shadow: 0 0 0 0.1em #4A90E2;
+}
+.check__input:checked+.check__box {
+  background-color: #4A90E2;
+  background-image: url(images/check.svg);
+}
+.check__input:focus+.check__box {
+  box-shadow:
+    0 0 0 0.1em #4A90E2,
+   
+}
+.check__input:disabled+.check__box {
+  box-shadow: 0 0 0 0.1em #9B9B9B;
+}
+.check__input:checked:disabled+.check__box {
+  background-color: #9B9B9B;
+}
+.check-agree {
+  margin-top: 20px;
+}
 
 .agreement-text {
   user-select: none;
@@ -916,10 +973,11 @@ footer a {
     line-height: calc(24/14);
     letter-spacing: 0.03em;
     color: #757575;
-    text-decoration: underline;
+    
 }
 .agreement-link {
   color: var(--acent-text-color);
+  text-decoration: underline;
 }
 .form-icon .unchecked{
 opacity: 1;
@@ -938,7 +996,20 @@ transition: var(--trns-fast);
 }
 
 .form-btn {
-  justify-content: center;
+  margin-top: 30px;
+  color: var(--secondary-acent-text-color);
+    background-color: var(--acent-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    letter-spacing: 0.06em;
+    border: inherit;
+    border: none transparent;
+    padding: 10px 52px;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: block;
+    transition: color var(--trns-fast), background-color var(--trns-fast), box-shadow var(--trns-fast);
 }
 
 /* цвет основного текста #757575
