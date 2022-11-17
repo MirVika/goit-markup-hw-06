@@ -824,6 +824,7 @@ footer a {
   border: 1px solid rgba(0, 0, 0, 0.1);
 
   background-color: transparent;
+  color: var(--acent-text-color);
 
   cursor: pointer;
 }
