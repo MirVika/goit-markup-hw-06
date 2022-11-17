@@ -822,11 +822,14 @@ footer a {
   padding: 0;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-
   background-color: transparent;
-  color: var(--acent-text-color);
-
   cursor: pointer;
+}
+.close-btn-icon {
+  fill: currentColor;
+}
+.close-btn-icon:hover {
+  color: var(--acent-text-color);
 }
 .modal-title {
   font-weight: 700;
@@ -913,6 +916,7 @@ footer a {
     line-height: calc(24/14);
     letter-spacing: 0.03em;
     color: #757575;
+    text-decoration: underline;
 }
 .agreement-link {
   color: var(--acent-text-color);
