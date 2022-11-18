@@ -851,6 +851,11 @@ color: var(--secondary-acent-text-color);
   top: 50%;
   left: 12px;
   display: inline-block;
+  fill: currentColor;
+}
+.form-icon:hover,
+.form-icon:focus {
+  fill: var(--acent-text-color);
 }
 
 .form-label {
@@ -873,8 +878,6 @@ color: var(--secondary-acent-text-color);
 .form-input {
   width: 100%;
   height: 40px;
-  left: 576px;
-  top: ;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: transparent;
@@ -888,10 +891,11 @@ color: var(--secondary-acent-text-color);
   transition: var(--trns-fast);
 }
 .form-icon {
-  color: currentColor;
+  fill: currentColor;
 }
-.form-icon:focus {
-  color: var(--acent-text-color);
+.form-icon:focus,
+.form-icon:hover {
+  fill: var(--acent-text-color);
 }
 
 .form-label {
@@ -901,6 +905,11 @@ color: var(--secondary-acent-text-color);
 
 .form-field {
   margin-bottom: 20px;
+fill: currentColor;
+}
+.form-field:hover,
+.form-field:focus {
+  fill: var(--acent-text-color);
 }
 .form-message {
   width: 100%;
@@ -963,6 +972,8 @@ color: var(--secondary-acent-text-color);
 }
 .check-agree {
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .agreement-text {
